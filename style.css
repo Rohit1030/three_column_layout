@@ -1,0 +1,176 @@
+/* common */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+body {
+    background-color:  hsl(0, 0%, 95%);
+    display: flex;
+}
+
+section {
+    display: flex;
+    padding: 2.4rem 2.4rem;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display';
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+p {
+    max-height: 40%;
+    max-width: 90%;
+    overflow: hidden;
+}
+
+.common {
+    margin-right: 2.4rem;
+    text-transform: capitalize;
+    background-color: hsl(0, 0%, 95%);
+    border: none;
+    border-radius: 2rem;
+    margin-top: 4rem;
+    padding: 0.7rem 1.5rem;
+}
+
+.sedans .common:hover {
+    background-color: hsl(31, 77%, 52%);
+}
+.suvs .common:hover {
+    background-color: hsl(184, 100%, 22%);;
+}
+.luxury .common:hover {
+    background-color: hsl(179, 100%, 13%);
+}
+
+.common:hover {
+    box-shadow: inset 0 0 0 3px hsl(0, 0%, 95%);
+    cursor: pointer;
+}
+
+img, .common {
+    align-self:flex-start;
+}
+
+.sedans {
+    background-color: hsl(31, 77%, 52%);
+}
+
+.suvs {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.luxury {
+    background-color:  hsl(179, 100%, 13%);
+    
+}
+
+
+
+body, p, h1 {
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+.sedans .common {
+    color: hsl(31, 77%, 52%);;
+}
+
+.suvs .common {
+    color: hsl(184, 100%, 22%);
+}
+
+.luxury .common {
+    color: hsl(179, 100%, 13%);
+}
+
+p, .common {
+    font-family: 'Lexend Deca';
+    font-weight: 400;
+}
+
+.sedans, .suvs, .luxury {
+    flex: 1;
+}
+/* ------------------------------------------------------------------------ */
+
+/* mobile view */
+
+@media screen and (max-width: 375px) {
+    .sedans {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+    
+    .luxury {
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+
+    body {
+        width: 86%;
+        flex-direction: column; 
+        align-items: center;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+    .common {
+        margin-top: 2rem;
+    }
+
+    section {
+        min-height: 450px;
+    }
+
+    .common:hover {
+        color: hsl(0, 0%, 95%);
+    }
+
+} 
+
+@media screen and (min-width: 376px) {
+    
+    html {
+        height: 100%;
+    }
+    
+    body {
+        width: 60%;
+        min-height: 65%;
+        max-height: 70%;
+    }
+    
+    section {
+        width: 33.33%;
+    }
+    
+    .sedans {
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+    
+    .luxury {
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+    .common:hover {
+        color: hsl(0, 0%, 95%);
+    }
+}
